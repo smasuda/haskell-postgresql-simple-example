@@ -1,0 +1,10 @@
+version: "3"
+services:
+  sampledb:
+    build:
+      context: ../
+      dockerfile: DockerFile
+
+    container_name: sampledbsrv
+    ports:
+      - 15432:5432

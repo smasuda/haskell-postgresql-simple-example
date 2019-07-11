@@ -1,0 +1,50 @@
+name:                haskell-postgresql-simple-example
+version:             0.1.0.0
+github:              "smasuda/haskell-postgresql-simple-example"
+license:             MIT
+author:              "Shunsuke Masuda"
+maintainer:          "shun@acme.org"
+copyright:           "(C) Shunsuke Masuda"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Example
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/smasuda/haskell-postgresql-simple-example#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- postgresql-simple
+- text
+
+library:
+  source-dirs: src
+
+executables:
+  haskell-postgresql-simple-example-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-postgresql-simple-example
+
+tests:
+  haskell-postgresql-simple-example-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-postgresql-simple-example

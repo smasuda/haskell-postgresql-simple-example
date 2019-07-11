@@ -1,0 +1,8 @@
+FROM postgres:11.2
+ENV POSTGRES_USER=root
+ENV POSTGRES_PASSWORD=password
+ENV POSTGRES_INITDB_ARGS: "--encoding=UTF-8"
+ADD dev/init-for-docker.sh /docker-entrypoint-initdb.d
+ADD dev/sql /init_files/sql
+
+EXPOSE 5432
