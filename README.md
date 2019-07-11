@@ -6,7 +6,7 @@ This is a sample project how to use `postgresql-simple` package in Haskell.
 
 ```sh
 $ docker-compose -f dev/docker-compose.yml up -d
-$ stack test
+$ stack run
 $ docker-compose -f dev/docker-compose.yml rm -f -s -v
 ```
 
