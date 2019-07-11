@@ -1,6 +1,6 @@
 # haskell-postgresql-simple-example
 
-This is a sample project how to use `postgresql-simple` package in Haskell.
+This is a sample project how to use [postgresql-simple](http://hackage.haskell.org/package/postgresql-simple) package in Haskell.
 
 ## How to try
 
